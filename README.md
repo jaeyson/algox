@@ -1,21 +1,37 @@
 # Algox
 
-**TODO: Add description**
+## Data structures and Algorithms using Elixir Language
 
-## Installation
+[//]: # "Badges"
+[![Dependabot][dependabot badge]][dependabot]
+[![Actions Status][actions badge]][actions]
+[![Coverage][coverage badge]][coverage]
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `algox` to your list of dependencies in `mix.exs`:
+[//]: # "Links"
+[dependabot]: https://github.com/jaeyson/algox/pulls/app%2Fdependabot
+[actions]: https://github.com/jaeyson/algox/actions
+[coverage]: https://coveralls.io/github/jaeyson/algox?branch=main
 
-```elixir
-def deps do
-  [
-    {:algox, "~> 0.1.0"}
-  ]
-end
+[//]: # "Image sources"
+[dependabot badge]: https://img.shields.io/badge/Dependabot-enabled-green
+[actions badge]: https://github.com/jaeyson/algox/actions/workflows/ci.yml/badge.svg
+[coverage badge]: https://coveralls.io/repos/github/jaeyson/algox/badge.svg?branch=main
+
+
+[binary search link]: lib/algox/binary_search.ex
+[linear search link]: lib/algox/linear_search.ex
+
+### Files
+
+|     Name      |
+|---------------|
+| [Binary Search][binary search link] |
+| [Linear Search][linear search link] |
+
+### Benchmarks
+
+using mix task:
+
+```bash
+mix benchmark binary_search
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/algox>.
-

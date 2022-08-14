@@ -1,0 +1,9 @@
+{
+  "skip_files": [
+    "lib/algox.ex",
+    "lib/mix/tasks/"
+  ],
+  "terminal_options": {
+    "file_column_width": 80
+  }
+}

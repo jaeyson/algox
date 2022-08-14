@@ -1,18 +1,16 @@
 defmodule Algox do
-  @moduledoc """
-  Documentation for `Algox`.
-  """
+  alias Algox.BinarySearch
+  alias Algox.LinearSearch
 
-  @doc """
-  Hello world.
+  @moduledoc false
 
-  ## Examples
+  @callback run(term, term) :: term
 
-      iex> Algox.hello()
-      :world
+  defdelegate binary_search(list, target), to: BinarySearch, as: :run
+  defdelegate linear_search(list, target), to: LinearSearch, as: :run
 
-  """
-  def hello do
-    :world
+  @spec timing(String.t()) :: atom
+  def timing(function) do
+    Mix.Task.run("profile.eprof", ["-e", function])
   end
 end

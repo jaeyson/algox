@@ -25,4 +25,5 @@ algox-*.tar
 # Temporary files, for example, from tests.
 /tmp/
 
+.DS_Store
 .elixir_ls
