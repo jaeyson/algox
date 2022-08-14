@@ -15,19 +15,28 @@ defmodule Mix.Tasks.Benchmark do
         benchmark(input)
 
       false ->
-        """
-        You can find available modules to run via
-        lib/ directory, then for example run:
-
-        mix run benchmarks/run.exs binary_search
-        """
-        |> IO.puts()
+        not_found()
     end
   end
 
+  defp not_found do
+      """
+      You can find available modules to run via
+      lib/ directory, then for example run:
+
+      mix run benchmarks/run.exs binary_search
+      """
+      |> IO.puts()
+  end
+
   defp benchmark(name) do
-    [impl, args] = implementation(name)
-    Benchee.run(impl, benchee_config(args))
+    impl = implementation(name)
+    if not is_nil(impl) do
+      [impl, args] = impl
+      Benchee.run(impl, benchee_config(args))
+    else
+      not_found()
+    end
   end
 
   defp available_functions do
@@ -45,9 +54,12 @@ defmodule Mix.Tasks.Benchmark do
 
   defp implementation(name) do
     %{
-      "binary_search" => [
+      "binary search" => [
         %{
-          "Algox.binary_search/1" => fn {list_int, target} ->
+          "Linear search" => fn {list_int, target} ->
+            Algox.linear_search(list_int, target)
+          end,
+          "Binary search" => fn {list_int, target} ->
             Algox.binary_search(list_int, target)
           end,
           "Enum.at/2" => fn {list_int, target} ->
