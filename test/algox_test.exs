@@ -33,4 +33,9 @@ defmodule AlgoxTest do
       assert Algox.linear_search(list, target) === linear_search.(list, target)
     end
   end
+
+  test "Quick Sort" do
+    list = Enum.shuffle(1..10_000)
+    assert Algox.quick_sort(list) === Enum.sort(list)
+  end
 end

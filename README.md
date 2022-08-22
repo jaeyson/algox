@@ -20,6 +20,7 @@
 
 [binary search link]: lib/algox/binary_search.ex
 [linear search link]: lib/algox/linear_search.ex
+[quick sort link]: lib/algox/quick_sort.ex
 
 ### Files
 
@@ -27,11 +28,15 @@
 |---------------|
 | [Binary Search][binary search link] |
 | [Linear Search][linear search link] |
+| [Quick Sort][quick sort link] |
 
 ### Benchmarks
 
 using mix task:
 
 ```bash
+# file names found in lib/algox dir
 mix benchmark binary_search
+
+mix benchmark quick_sort
 ```

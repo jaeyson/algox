@@ -1,6 +1,4 @@
 defmodule Algox.LinearSearch do
-  @behaviour Algox
-
   @moduledoc """
   Linear search: needs to traverse the
   entire list in order to find the target.
@@ -9,7 +7,6 @@ defmodule Algox.LinearSearch do
   """
 
   @doc false
-  @impl Algox
   @spec run(list, integer) :: non_neg_integer | nil
   def run(list, target) do
     do_run(list, target, 0)

@@ -20,22 +20,23 @@ defmodule Mix.Tasks.Benchmark do
   end
 
   defp not_found do
-      """
-      You can find available modules to run via
-      lib/ directory, then for example run:
+    """
+    You can find available modules to run via
+    lib/ directory, then for example run:
 
-      mix run benchmarks/run.exs binary_search
-      """
-      |> IO.puts()
+    mix run benchmarks/run.exs binary_search
+    """
+    |> IO.puts()
   end
 
   defp benchmark(name) do
     impl = implementation(name)
-    if not is_nil(impl) do
+
+    if is_nil(impl) do
+      not_found()
+    else
       [impl, args] = impl
       Benchee.run(impl, benchee_config(args))
-    else
-      not_found()
     end
   end
 
@@ -54,7 +55,7 @@ defmodule Mix.Tasks.Benchmark do
 
   defp implementation(name) do
     %{
-      "binary search" => [
+      "binary_search" => [
         %{
           "Linear search" => fn {list_int, target} ->
             Algox.linear_search(list_int, target)
@@ -67,9 +68,16 @@ defmodule Mix.Tasks.Benchmark do
           end
         },
         fn _ ->
-          list = Enum.to_list(1..100_000)
+          list = Enum.to_list(1..10_000)
           {list, Enum.random(list)}
         end
+      ],
+      "quick_sort" => [
+        %{
+          "Quick sort" => fn list -> Algox.quick_sort(list) end,
+          "Enum.sort/1" => fn list -> Enum.sort(list) end
+        },
+        fn _ -> Enum.shuffle(1..1_000) end
       ]
     }[name]
   end

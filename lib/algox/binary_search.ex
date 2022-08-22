@@ -1,6 +1,4 @@
 defmodule Algox.BinarySearch do
-  @behaviour Algox
-
   @moduledoc """
   Binary search: marking the middle element
   in a list as pivot (starting point) before
@@ -11,7 +9,6 @@ defmodule Algox.BinarySearch do
   """
 
   @doc false
-  @impl Algox
   @spec run(list, integer) :: non_neg_integer | nil
   def run(list, target) do
     do_run(list, target, 0, length(list) - 1)
