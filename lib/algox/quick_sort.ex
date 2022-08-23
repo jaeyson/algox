@@ -5,8 +5,8 @@ defmodule Algox.QuickSort do
   the pivoted element in between the
   lesser numbers and greater numbers.
 
-  Accepts integer and returns empty or
-  list of integers.
+  Accepts integer and returns empty list
+  or list of integers.
   """
 
   @doc false

@@ -1,5 +1,6 @@
 defmodule Mix.Tasks.Benchmark do
   use Mix.Task
+  # Code.ensure_compiled!(Benchee)
 
   @moduledoc false
 
@@ -24,7 +25,7 @@ defmodule Mix.Tasks.Benchmark do
     You can find available modules to run via
     lib/ directory, then for example run:
 
-    mix run benchmarks/run.exs binary_search
+    mix benchmark binary_search
     """
     |> IO.puts()
   end
