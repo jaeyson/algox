@@ -21,6 +21,7 @@
 [binary search link]: lib/algox/binary_search.ex
 [linear search link]: lib/algox/linear_search.ex
 [quick sort link]: lib/algox/quick_sort.ex
+[walk on matrix link]: lib/algox/walk_on_matrix.ex
 
 ### Files
 
@@ -29,6 +30,7 @@
 | [Binary Search][binary search link] |
 | [Linear Search][linear search link] |
 | [Quick Sort][quick sort link] |
+| [Walk on Matrix][walk on matrix link] |
 
 ### Benchmarks
 

@@ -10,6 +10,7 @@ defmodule Algox do
   defdelegate binary_search(list, target), to: BinarySearch, as: :run
   defdelegate linear_search(list, target), to: LinearSearch, as: :run
   defdelegate quick_sort(list), to: QuickSort, as: :run
+  defdelegate walk_on_matrix(list), to: WalkOnMatrix, as: :run
 
   @doc """
   Measures execution time spent

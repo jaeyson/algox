@@ -79,6 +79,14 @@ defmodule Mix.Tasks.Benchmark do
           "Enum.sort/1" => fn list -> Enum.sort(list) end
         },
         fn _ -> Enum.shuffle(1..1_000) end
+      ],
+      "walk_on_matrix" => [
+        %{
+          "Walk on Matrix 1,000 x 1,000" => fn list -> Algox.walk_on_matrix(list) end
+        },
+        fn _ ->
+          Enum.map(1..1_000, fn _ -> Enum.to_list(1..1_000) end)
+        end
       ]
     }[name]
   end
