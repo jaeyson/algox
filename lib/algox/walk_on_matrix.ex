@@ -31,7 +31,7 @@ defmodule WalkOnMatrix do
   defp sort([head | tail], unsorted_rows, sorted_row) when tail === [] do
     [last_elem | rest] = segregate_last_elem(head, [])
     sorted_row = [last_elem | sorted_row]
-    sorted_row = add_to_sorted(rest, sorted_row)
+    sorted_row = reverse_row(rest, sorted_row)
 
     sort(unsorted_rows, [], sorted_row)
   end
@@ -42,12 +42,6 @@ defmodule WalkOnMatrix do
     unsorted_rows = [rest | unsorted_rows]
 
     sort(tail, unsorted_rows, sorted_row)
-  end
-
-  defp add_to_sorted([], sorted), do: sorted
-
-  defp add_to_sorted([head | tail], sorted) do
-    add_to_sorted(tail, [head | sorted])
   end
 
   defp reverse_row([], reversed_row), do: reversed_row
