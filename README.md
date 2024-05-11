@@ -18,19 +18,12 @@
 [coverage badge]: https://coveralls.io/repos/github/jaeyson/algox/badge.svg?branch=main
 
 
-[binary search link]: lib/algox/binary_search.ex
-[linear search link]: lib/algox/linear_search.ex
-[quick sort link]: lib/algox/quick_sort.ex
-[walk on matrix link]: lib/algox/walk_on_matrix.ex
-
 ### Files
 
-|     Name      |
-|---------------|
-| [Binary Search][binary search link] |
-| [Linear Search][linear search link] |
-| [Quick Sort][quick sort link] |
-| [Walk on Matrix][walk on matrix link] |
+https://github.com/jaeyson/algox/blob/main/lib/algox/binary_search.ex#L1
+https://github.com/jaeyson/algox/blob/main/lib/algox/linear_search.ex#L1
+https://github.com/jaeyson/algox/blob/main/lib/algox/quick_sort.ex#L1
+https://github.com/jaeyson/algox/blob/main/lib/algox/walk_on_matrix.ex#L1
 
 ### Benchmarks
 
