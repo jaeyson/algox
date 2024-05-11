@@ -20,10 +20,10 @@
 
 ### Files
 
-https://github.com/jaeyson/algox/blob/1420c72a95aa102a2cfe54bf790bbe60ef11bb70/lib/algox/binary_search.ex#L1
-https://github.com/jaeyson/algox/blob/1420c72a95aa102a2cfe54bf790bbe60ef11bb70/lib/algox/linear_search.ex#L1
-https://github.com/jaeyson/algox/blob/1420c72a95aa102a2cfe54bf790bbe60ef11bb70/lib/algox/quick_sort.ex#L1
-https://github.com/jaeyson/algox/blob/1420c72a95aa102a2cfe54bf790bbe60ef11bb70/lib/algox/walk_on_matrix.ex#L1
+https://github.com/jaeyson/algox/blob/1420c72a95aa102a2cfe54bf790bbe60ef11bb70/lib/algox/binary_search.ex#L1-L9
+https://github.com/jaeyson/algox/blob/1420c72a95aa102a2cfe54bf790bbe60ef11bb70/lib/algox/linear_search.ex#L1-L7
+https://github.com/jaeyson/algox/blob/1420c72a95aa102a2cfe54bf790bbe60ef11bb70/lib/algox/quick_sort.ex#L1-L10
+https://github.com/jaeyson/algox/blob/1420c72a95aa102a2cfe54bf790bbe60ef11bb70/lib/algox/walk_on_matrix.ex#L1-L15
 
 ### Benchmarks
 
